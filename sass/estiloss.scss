@@ -55,10 +55,16 @@ body {
         width: 100%;
         justify-content: center;
     }
-    h2{
+    .info-vinos{
         color: $color-principal !important;
         text-align: center;
-        text-decoration: underline;
+        text-decoration: none;
+        width: 100%;
+        font-size: 20px;
+        &__link-vinos{
+            color: $color-principal;
+            text-decoration: underline;
+        }
     }
 // APLICO EACH
     @each $numero, $color in $redes {
@@ -158,6 +164,10 @@ body {
  .vinos:hover {
    filter: opacity(0.9);
    transform: scale(1.04);
+ }
+
+ .container-info-vinos{
+     display: flex;
  }
  
  .grid-container {
