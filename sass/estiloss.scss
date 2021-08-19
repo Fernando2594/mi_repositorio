@@ -54,6 +54,7 @@ body {
         border-radius: 20px;
         width: 100%;
         justify-content: center;
+        font-size: 14px;
     }
     .info-vinos{
         color: $color-principal !important;
@@ -127,7 +128,7 @@ body {
     // BEM
     .padre-footer{
                 display: flex;
-                background: linear-gradient(rgb(8, 8, 8),$color-fondo);
+                background:linear-gradient( $color-fondo,rgb(8, 8, 8));
                 color: ivory;
                 height: 100%;
                 &__container{
@@ -168,6 +169,29 @@ body {
 
  .container-info-vinos{
      display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 10px;
+     color: burlywood;
+     background:radial-gradient( rgba(12, 12, 12, 0.466), $color-fondo);
+     &__titulo{
+         width: 60%;
+         text-align: center;
+         border-style: solid;
+         border-radius: 10px;
+     }
+     &__img{
+         border-radius: 20px;
+         &:hover{
+            filter: opacity(0.9);
+            transform: scale(1.01);
+            transition: ease-in 0.3s;
+         }
+     }
+     &__parrafo{
+         padding: 10px;
+         width: 40rem;
+     }
  }
  
  .grid-container {
