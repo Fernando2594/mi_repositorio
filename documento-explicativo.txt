@@ -1,0 +1,13 @@
+DOCUMENTO EXPLICATIVO
+
+1) En el archivo index.html sumé el SEO con las siguientes características:
+Descripción: mediante la etiqueta meta name description, agregué el siguiente párrafo que explica el contenido de mi sitio: “Bodega dedicada a la elaboración y fraccionamiento de vinos, situada en la zona este de Mendoza para el resto del mundo."
+
+2) Realicé las mismas acciones del punto 1 para el resto de las secciones con su respectiva descripción y sus respectivos keywords.
+
+3) Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas las páginas de mi sitio: "Bodega, Vinos, Mendoza, Uvas"
+
+4) Agregué encabezados en mis secciones "Nuestros Vinos" y "Fincas" mediante la etiqueta <h> para que tenga mejor legibilidad mi contenido y el usuario sepa en qué sección se encuentra situado.
+
+5) Debido a que en futuras entregas tengo pensado seguir agregando "subsecciones" me pareció conveniente agregar un <breadcrumb> en la mayoría de mis archivos html a través de bootstrap para seguir un orden jerárquico de mis secciones y para que al usuario le sea sencilla la navegación a través de mi sitio web.
+

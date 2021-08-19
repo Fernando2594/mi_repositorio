@@ -1,0 +1,204 @@
+/*ESTILOS GENERALES*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+  background-color: #000000;
+  font-family:  'Cinzel', serif;
+}
+
+
+    /*ESTILOS APLICADOS A HEADER*/
+    
+    .padreHeader{
+        display: grid;
+        background-image:url(../img/fondo-slider-dos.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-template-areas: "logo titulo search"
+                            ". subtitulo redes";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    header p{
+        font-size: 70px;
+        text-align: center;
+        padding-top: 60px;
+        color: #b9ae43;
+        font-weight: 300;
+    }
+    .subtitulo{
+        font-size: 30px;
+        color: #b9ae43;
+        text-align: center;
+    }
+    
+    .flex2{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 20px;
+        margin-left: 50px;
+    }
+    body li{
+        display: inline-block;
+    }
+    A {text-decoration: none; color: black; padding: 10px;} 
+
+    /*ESTILOS APLICADOS A MAIN*/
+    .padreMain{
+    display:flex;
+    background-image: url(../img/barrica.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top: 100px;
+    color: ivory;
+    }
+    h1{
+        font-family: 'Cinzel', serif;
+        text-decoration: underline;
+    }
+    main p{
+        font-size: 20px;
+    }
+
+    ul li:hover ul{
+        display: block;
+    }
+    ul ul li {
+        display:block;
+        background-color: rgb(133, 141, 133);
+        border-style: double;
+        width: 320px;
+        border-color: rgb(31, 32, 27);
+     }
+     main section nav ul li {
+        position:relative;
+     } 
+    ul ul {
+        position: absolute;
+        display: none;
+    }
+    nav{
+        background-color: rgb(133, 139, 131);
+        height: 10px;
+        width: 100%;
+        border-style:double;
+        border-color: black;
+        font-size: 25px;
+        padding-bottom: 50px;
+        font-weight: 600;
+        justify-items: center;
+        }
+        
+    nav ul li:hover{ 
+        background-color: #b9ae43;
+        height: 50px;
+        color: black;
+    }
+    .padreFooter{
+        display: flex;
+        background: linear-gradient(rgb(8, 8, 8),#b9ad4362);
+        color: ivory;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 20px;
+    }
+    footer a{
+        color: ivory;
+        transition: linear;
+    }
+    
+    .padreForm{
+        display:flex;
+        flex-direction: column;
+        background-image: url(../img/barrica.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 900px;
+        flex-wrap: wrap;
+        align-content: center;
+        font-size: 30px;
+        }
+        MAIN{
+            color: ivory;
+        }
+
+ .grid-item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   border-radius: 4px;
+   transition: transform 0.3s ease-in-out;
+ 
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+ }
+ 
+ .grid-item:hover {
+   filter: opacity(0.9);
+   transform: scale(1.04);
+ }
+ 
+ .grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   grid-auto-rows: minmax(250px, auto);
+   gap: 20px;
+   padding: 20px;
+   grid-auto-flow: dense;
+ }
+ .gridEquipo{
+     display: grid;
+     grid-template-columns: 1fr 1fr ;
+     grid-template-rows: 1fr 1fr;
+     gap: 20px;
+     font-size: 20px;
+     text-decoration: solid;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+ .fondoTarjeta{
+     background-color: #b9ae43;
+ }
+ .fincas{
+     padding-bottom: 20px;
+     border-radius: 20px;
+     width: 100%;
+ }
+ .textLight{
+     color: white;
+ }
+ h2{
+     color: white;
+     text-decoration: underline;
+ }
+ h4{
+     color: white;
+     font-size: 20PX;
+     text-align: center;
+ }
+ 
+ 
+ @media (min-width: 600px) {
+   .ancho {
+     grid-column: span 2;
+   }
+ 
+   .alto {
+     grid-row: span 1;
+   }
+ }
+ .colorNav{
+     color: black;
+ }
+

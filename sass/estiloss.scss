@@ -1,0 +1,227 @@
+@import "./partials/variables";
+
+/*ESTILOS GENERALES*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+  background-color: #000000;
+  font-family:  'Cinzel', serif;
+}
+
+
+    /*ESTILOS APLICADOS A HEADER*/
+    
+    // BEM
+    .padre-header{
+        display: grid;
+        background-image:url(../img/fondo-slider-dos.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        
+        &__title{
+            font-size: $sizeTitle;
+            text-align: center;
+            padding-top: 60px;
+            color: $color-principal;
+            font-weight: 300;
+        }
+        // APLICO OPERACIONES
+        &__subtitulo{
+            font-size: $sizeTitle/2;
+            color: $color-principal;
+            text-align: center;
+        }
+        &__redes{
+            display: flex;
+            flex-direction: column-reverse;
+            padding-bottom: 20px;
+            margin-left: 50px;
+        }
+        &__migaDePan{
+            padding-top: 150px;
+            color: rgba(255, 248, 240, 0.973);
+        }
+    }
+    .breadcrumb{
+        background-color: $color-principal;
+        border-radius: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    h2{
+        color: $color-principal !important;
+        text-align: center;
+        text-decoration: underline;
+    }
+// APLICO EACH
+    @each $numero, $color in $redes {
+        .#{$numero}{
+            background-color: $color;
+            border-radius: 100px;
+            filter:opacity(0.8);
+        }
+        }
+        .numero1:hover{
+            transform: scale(1.05);
+            transition: transform 0.5s ease-in-out;
+        }
+        .numero2:hover{
+            @extend .numero1:hover;
+        }
+        .numero3:hover{
+            @extend .numero1:hover;
+        }
+        .numero4:hover{
+            @extend .numero1:hover;
+        }
+    li{
+        display: inline-block;
+    }
+   
+    A {text-decoration: none; color: black; padding: 10px;}
+
+    // BEM
+        .nav{
+            background-color: grey;
+            height: 48px;
+            width: 100%;
+            border-style:double;
+            border-color: black;
+            font-size: 20px;
+            font-weight:bold;
+            display: inline-block;
+            
+            &__list{
+                display: flex;
+                justify-content:center;
+                flex-wrap: wrap;
+            }
+            &__item{
+                background-color: grey;
+                margin: 0px 20px;
+                width: 220px;
+                text-align: center;
+                display: inline-block;
+
+            } 
+        }
+        
+    .nav__item:hover{ 
+        background-color: $color-principal;
+        height: 40px;
+        color: black !important;
+    }
+    // BEM
+    .padre-footer{
+                display: flex;
+                background: linear-gradient(rgb(8, 8, 8),$color-fondo);
+                color: ivory;
+                height: 100%;
+                &__container{
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                &__row{
+                    color: $color-principal;
+                }
+    }
+
+    // BEM
+ .vinos {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.3s ease-in-out;
+   &__premium {
+    grid-column: span 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+//   APLICO EXTEND
+  &__tradicional {
+    @extend .vinos__premium;
+    grid-column:auto;
+    grid-row: span 1;
+  }
+ }
+ 
+ .vinos:hover {
+   filter: opacity(0.9);
+   transform: scale(1.04);
+ }
+ 
+ .grid-container {
+   display: grid;
+   background: linear-gradient($color-fondo, rgb(8, 8, 8));
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   grid-auto-rows: minmax(250px, auto);
+   gap: 20px;
+   padding: 20px;
+   grid-auto-flow: dense;
+ }
+
+// BEM
+ .container-help{
+    background: linear-gradient($color-fondo, rgb(8, 8, 8));
+    &__row{
+        margin: 0px 10px 0px 10px;
+    }
+ }
+ .col-md-6{
+     display: grid;
+     margin-left: 25%;
+ }
+
+//  BEM
+ .gridEquipo{
+     display: grid;
+     grid-template-columns: 1fr 1fr ;
+     grid-template-rows: 1fr 1fr;
+     gap: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     &__tarjeta{
+        font-size: 20px;
+        text-decoration: solid;
+     }
+     &__fondoTarjeta{
+         background-color: #b9ae43;
+     }
+ }
+
+//  BEM
+ .container-fluid{
+        &__title-fincas{
+            display: flex;
+            color: white;
+            text-decoration: underline;
+            justify-content: center;
+    }
+    &__img{
+        padding-bottom: 20px;
+        border-radius: 20px;
+        width: 100%;
+    }
+    &--modificador{
+        color: rgb(255, 255, 255);
+        font-size: 18PX;
+        text-align: center;
+        padding-top: 10px;
+    }
+ }
+ 
+ 
+ 
+ .colorNav{
+     color: black;
+ }
