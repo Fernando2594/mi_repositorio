@@ -2,7 +2,6 @@
 
 /*ESTILOS GENERALES*/
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +10,6 @@ body {
   background-color: #000000;
   font-family:  'Cinzel', serif;
 }
-
 
     /*ESTILOS APLICADOS A HEADER*/
     
@@ -24,6 +22,7 @@ body {
         background-size: cover;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 2fr 1fr;
+        height: 50vh;
         
         &__title{
             font-size: $sizeTitle;
@@ -61,69 +60,43 @@ body {
         text-align: center;
         text-decoration: none;
         width: 100%;
-        font-size: 20px;
+        font-size: 1rem;
         &__link-vinos{
             color: $color-principal;
-            text-decoration: underline;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+                filter: opacity(0.8);
+                color: $color-principal;
+            }
         }
     }
-// APLICO EACH
-    @each $numero, $color in $redes {
-        .#{$numero}{
-            background-color: $color;
-            border-radius: 100px;
-            filter:opacity(0.8);
-        }
-        }
-        .numero1:hover{
-            transform: scale(1.05);
-            transition: transform 0.5s ease-in-out;
-        }
-        .numero2:hover{
-            @extend .numero1:hover;
-        }
-        .numero3:hover{
-            @extend .numero1:hover;
-        }
-        .numero4:hover{
-            @extend .numero1:hover;
-        }
-    li{
-        display: inline-block;
-    }
-   
-    A {text-decoration: none; color: black; padding: 10px;}
 
-    // BEM
-        .nav{
-            background-color: grey;
-            height: 48px;
-            width: 100%;
-            border-style:double;
-            border-color: black;
-            font-size: 20px;
-            font-weight:bold;
-            display: inline-block;
-            
-            &__list{
-                display: flex;
-                justify-content:center;
-                flex-wrap: wrap;
+        .navegacion{
+            background-color: rgba(59, 57, 54, 0.897);
+            display: flex;
+            justify-content:space-between;
+            &__cont{
+                padding: 1.2rem;
+                height: 4rem;
             }
             &__item{
-                background-color: grey;
-                margin: 0px 20px;
-                width: 220px;
-                text-align: center;
-                display: inline-block;
-
-            } 
+                padding: 1.2rem;
+                font-size: 1rem;
+                border-radius: 2px;
+                text-decoration: none;
+                color: $color-principal;
+                &:hover{
+                    background-color: $color-principal;
+                    color: black;
+                    transition:ease-in-out (0.5s);
+                }
+            }
         }
         
-    .nav__item:hover{ 
-        background-color: $color-principal;
-        height: 40px;
-        color: black !important;
+
+    .container-fluid-index{
+        height: 100%;
     }
     // BEM
     .padre-footer{
@@ -131,6 +104,9 @@ body {
                 background:linear-gradient( $color-fondo,rgb(8, 8, 8));
                 color: ivory;
                 height: 100%;
+                text-align: center;
+                color: $color-principal;
+                font-size: 1rem;
                 &__container{
                     flex-wrap: wrap;
                     justify-content: space-around;
@@ -139,6 +115,11 @@ body {
                 }
                 &__row{
                     color: $color-principal;
+                    text-decoration: none;
+                    &:hover{
+                        color: $color-principal;
+                        filter:opacity(0.9)
+                    }
                 }
     }
 
@@ -166,14 +147,13 @@ body {
    filter: opacity(0.9);
    transform: scale(1.04);
  }
-
  .container-info-vinos{
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
      padding: 10px;
      color: burlywood;
-     background:radial-gradient( rgba(12, 12, 12, 0.466), $color-fondo);
+     background:radial-gradient( rgba(255, 11, 11, 0.281), $color-fondo);
      &__titulo{
          width: 60%;
          text-align: center;
@@ -181,7 +161,10 @@ body {
          border-radius: 10px;
      }
      &__img{
+         display: flex;
          border-radius: 20px;
+         width: 60%;
+         justify-items: center;
          &:hover{
             filter: opacity(0.9);
             transform: scale(1.01);
@@ -206,14 +189,14 @@ body {
 
 // BEM
  .container-help{
-    background: linear-gradient($color-fondo, rgb(8, 8, 8));
+    background: radial-gradient(black,$color-fondo);
     &__row{
         margin: 0px 10px 0px 10px;
     }
  }
- .col-md-6{
+ .col-md-4{
      display: grid;
-     margin-left: 25%;
+     margin-left: 30%;
  }
 
 //  BEM
@@ -253,9 +236,18 @@ body {
         padding-top: 10px;
     }
  }
- 
- 
- 
- .colorNav{
-     color: black;
- }
+
+ @media (max-width:768px){
+     .navegacion{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         height: 50vh;
+         align-content: center;
+         &__cont{
+             display: flex;
+             flex-direction: column;
+             align-content:start;
+             }
+             }
+         }
