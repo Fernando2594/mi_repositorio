@@ -48,13 +48,55 @@ body {
             color: rgba(255, 248, 240, 0.973);
         }
     }
-    .breadcrumb{
-        background-color: $color-principal;
-        border-radius: 20px;
-        width: 100%;
-        justify-content: center;
-        font-size: 14px;
+    .window-notice {
+        background: rgba(33, 41, 52, .85);
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+            &__content {
+            background:rgba(59, 57, 54, 0.897);
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+            box-sizing: content-box;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            max-width: 600px;
+            min-width: 320px !important;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 2rem;
+            font-size: 1.3rem;
+            text-align: center;
+            border-style: double;
+            border-color: white;
     }
+    &__content-text{
+        color: white;
+    }
+    &__content-button{
+        margin-top: 30px;
+        margin-left: 25%;
+        margin-right: 25%;
+        color: white;
+        display: flex;
+        justify-content:space-around;
+        text-decoration: none;
+        
+        &:hover{
+            background-color: black;
+            border-radius: 50px;
+            color: $color-principal;
+            transition: ease-in-out (0.5s);
+            
+        }
+    }
+}
     .info-vinos{
         color: $color-principal !important;
         text-align: center;
@@ -71,26 +113,46 @@ body {
             }
         }
     }
-
+        .bg-light{
+            background-color:rgba(211, 208, 208, 0.644) !important;
+            padding: -10px;
+            
+        }
         .navegacion{
-            background-color: rgba(59, 57, 54, 0.897);
+            background-color: rgba(255, 255, 255, 0.753);
+            border-radius: 5px;
             display: flex;
             justify-content:space-between;
-            &__cont{
-                padding: 1.2rem;
-                height: 4rem;
-            }
+            flex-wrap: wrap;
+            width: 100%;
+            height: 65px;
+            position:fixed;
+            
             &__redes{
-                padding: 1.2rem;
+                padding: 0.8rem;
             }
             &__item{
+                display:inline-block;
+                margin-top: 10px;
+                padding:  10px 20px;
+                font-size: 1rem;
+                border-radius: 2px;
+                text-decoration: none;
+                color:rgba(27, 26, 26, 0.658);
+                &:hover{
+                   transform: scale(1.1);
+                    color: $color-principal;
+                    transition:ease-in-out (0.3s);
+                }
+            }
+            &__item1{
                 padding: 1.2rem;
                 font-size: 1rem;
                 border-radius: 2px;
                 text-decoration: none;
                 color: $color-principal;
                 &:hover{
-                    background-color: $color-principal;
+                    background:linear-gradient(rgb(255, 0, 140),$color-principal);
                     color: black;
                     transition:ease-in-out (0.5s);
                 }
@@ -101,22 +163,25 @@ body {
     .container-fluid-index{
         height: 100%;
     }
-    // BEM
+    
     .padre-footer{
+                padding: 15px;
                 display: flex;
-                background:linear-gradient( $color-fondo,rgb(8, 8, 8));
+                background:radial-gradient( rgb(8, 8, 8),$color-fondo);
                 color: ivory;
                 height: 100%;
                 text-align: center;
                 color: $color-principal;
                 font-size: 1rem;
                 &__container{
+                    
                     flex-wrap: wrap;
                     justify-content: space-around;
                     width: 100%;
                     margin-top: 20px;
                 }
                 &__row{
+                    padding: 15px;
                     color: $color-principal;
                     text-decoration: none;
                     &:hover{
@@ -137,6 +202,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 5px
   }
 //   APLICO EXTEND
   &__tradicional {
@@ -151,32 +217,37 @@ body {
    transform: scale(1.04);
  }
  .container-info-vinos{
+     height: 160rem;
      display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
-     padding: 10px;
+     justify-content:space-around;
+     flex-wrap: Wrap;
      color: burlywood;
      background:radial-gradient( rgba(255, 11, 11, 0.281), $color-fondo);
+     &__encabezado{
+         text-decoration:underline;
+         padding: 20px;
+         width: 100%;
+     }
      &__titulo{
-         width: 60%;
+         justify-items: center;
+         font-size: 1rem;
+         width: 50%;
          text-align: center;
-         border-style: solid;
-         border-radius: 10px;
+         margin-top: 8rem;
      }
      &__img{
-         display: flex;
-         border-radius: 20px;
-         width: 60%;
-         justify-items: center;
+         margin-top: 10px;
+         margin-left: 20px;
+         width: 45%;
          &:hover{
             filter: opacity(0.9);
-            transform: scale(1.01);
+            transform: scale(1.02);
             transition: ease-in 0.3s;
          }
      }
      &__parrafo{
-         padding: 10px;
-         width: 40rem;
+         
+         width: 20%;
      }
  }
  
@@ -193,8 +264,9 @@ body {
 // BEM
  .container-help{
     background: radial-gradient(black,$color-fondo);
+    height: 600px;
     &__row{
-        margin: 0px 10px 0px 10px;
+        padding: 0px 0px 0px 10px;
     }
  }
  .col-md-4{
@@ -202,7 +274,7 @@ body {
      margin-left: 30%;
  }
 
-//  BEM
+
  .gridEquipo{
      display: grid;
      grid-template-columns: 1fr 1fr ;
@@ -219,7 +291,7 @@ body {
      }
  }
 
-//  BEM
+
  .container-fluid{
         &__title-fincas{
             display: flex;
@@ -239,18 +311,169 @@ body {
         padding-top: 10px;
     }
  }
+ 
+ @media (max-width:1120px){
+    .padre-header{
+        display: grid;
+        background-image:url(../img/fondo-slider-dos.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 50vh;
+        
+        &__title{
+            font-size: $sizeTitleResponsive1;
+            text-align: center;
+            padding-top: 60px;
+            color: $color-principal;
+            font-weight: 300;
+        }
+        &__subtitulo{
+            font-size: $sizeTitleResponsive1/2;
+            color: $color-principal;
+            text-align: center;
+        }
+ }
+ }
+ 
+ @media (max-width:800px){
+    .padre-header{
+        display: grid;
+        background-image:url(../img/fondo-slider-dos.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 50vh;
+        
+        &__title{
+            font-size: $sizeTitleResponsive2;
+            text-align: center;
+            padding-top: 60px;
+            color: $color-principal;
+            font-weight: 300;
+        }
+        &__subtitulo{
+            font-size: $sizeTitleResponsive2/2;
+            color: $color-principal;
+            text-align: center;
+        }
+ }
+ .container-fluid{
+    &__title-fincas{
+        display: flex;
+        color: white;
+        text-decoration: underline;
+        justify-content: center;
+}
+&__img{
+    padding-bottom: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+&--modificador{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+}
+}
 
- @media (max-width:768px){
-     .navegacion{
-         width: 100%;
-         display: flex;
-         flex-direction: column;
-         height: 50vh;
-         align-content: center;
-         &__cont{
-             display: flex;
-             flex-direction: column;
-             align-content:start;
-             }
-             }
+ .gridEquipo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__tarjeta{
+       font-size: 15px;
+       text-decoration: solid;
+    }
+    &__fondoTarjeta{
+        background-color: #b9ae43;
+    }
+}
+.container-info-vinos{
+    height: 250rem;
+    display: flex;
+    justify-content:center;
+    flex-wrap: Wrap;
+    color: burlywood;
+    background:radial-gradient( rgba(255, 11, 11, 0.281), $color-fondo);
+    &__encabezado{
+        text-decoration:underline;
+        
+        width: 100%;
+    }
+    &__titulo{
+        justify-items: center;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        
+    }
+    &__img{
+        margin-right: 30px;
+        margin-bottom: -100px;
+        width: 90%;
+        &:hover{
+           filter: opacity(0.9);
+           transform: scale(1.02);
+           transition: ease-in 0.3s;
+        }
+    }
+    &__parrafo{
+        
+        width: 20%;
+    }
+}
+ }
+ @media (max-width:580px){
+     
+        .padre-footer{
+            font-size: 0.8rem;
+            }
+        .padre-header{
+                display: grid;
+                background-image:url(../img/fondo-slider-dos.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 2fr 1fr;
+                height: 50vh;
+                
+                &__title{
+                    font-size: $sizeTitleResponsive;
+                    text-align: center;
+                    padding-top: 60px;
+                    color: $color-principal;
+                    font-weight: 300;
+                }
+                // APLICO OPERACIONES
+                &__subtitulo{
+                    font-size: $sizeTitleResponsive/2;
+                    color: $color-principal;
+                    text-align: center;
+                }
          }
+         .gridEquipo{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr;
+            gap: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &__tarjeta{
+               font-size: 15px;
+               text-decoration: solid;
+            }
+            &__fondoTarjeta{
+                background-color: #b9ae43;
+            }
+        }
+        }

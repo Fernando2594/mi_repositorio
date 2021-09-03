@@ -17,47 +17,65 @@
 <body>
   <header>
     <div class="padre-header">
-        <div class="padre-header__logo"><a href="index.html"><img src="img/losHaroldosLogo.png" alt="#"></a></div>
+        <div class="padre-header__logo"><a href="index1.html"><img src="img/losHaroldosLogo.png" alt="#"></a></div>
         <div class="padre-header__title"> <p>LOS HAROLDOS</p></div>
         <div></div>
         <div></div>
          <div class="padre-header__subtitulo">BODEGAS Y VIÑEDOS</div>
     </div>
  </header>
-  <div>
-    <nav class="navegacion">
-      <div class="navegacion__cont"><a href="nuestrosVinos.html" class="navegacion__item">Nuestros Vinos</a>
-        <a href="equipoDeTrabajo.html" class="navegacion__item">Equipo de trabajo</a>
-        <a href="fincas.html" class="navegacion__item">Fincas</a>
-        <a href="ayuda.html" class="navegacion__item">Ayuda</a>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="btn-secondary active dropdown-toggle navegacion__item" href="nuestrosVinos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nuestros Vinos
+                </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="nuestrosVinos.html">General</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="masInfo.html">Línea Premium</a></li>
+                  <li><a class="dropdown-item" href="masInfo.html#HermandadMalbec">Hermandad Malbec</a></li>
+                  <li><a class="dropdown-item" href="masInfo.html#HermandadChardonnay">Hermandad Chardonnay</a></li>
+                  <li><a class="dropdown-item" href="masInfo.html#HermandadCabernetFranc">Hermandad Cabernet Franc</a></li>
+                  <li><a class="dropdown-item" href="masInfo.html#FerusMalbec">Ferus Malbec</a></li>
+                  <li><a class="dropdown-item" href="masInfo.html#FerusBlancDeBlancs">Ferus Blanc de Blancs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="active navegacion__item" aria-current="page" href="equipoDeTrabajo.html">Equipo de Trabajo</a>
+            </li>
+            <li class="nav-item">
+                <a class="navegacion__item" href="fincas.html">Fincas</a>
+            </li>
+              <li class="nav-item">
+                <a class="active navegacion__item" aria-current="page" href="ayuda.html">Ayuda</a>
+            </li>
+            
+            </ul>
+            <div class="navegacion__redes">
+              <a href="twitter.com"><i class="bi bi-twitter navegacion__item"></i></a>
+              <a href="www.facebook.com"><i class="bi bi-facebook navegacion__item"></i></a>
+              <a href="www.instagram.com"><i class="bi bi-instagram navegacion__item"></i></a>
+              <a href="www.youtube.com"><i class="bi bi-youtube navegacion__item"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="navegacion__redes">
-          <a href="twitter.com"><i class="bi bi-twitter navegacion__item"></i></a>
-          <a href="www.facebook.com"><i class="bi bi-facebook navegacion__item"></i></a>
-          <a href="www.instagram.com"><i class="bi bi-instagram navegacion__item"></i></a>
-          <a href="www.youtube.com"><i class="bi bi-youtube navegacion__item"></i></a></div>
-  </nav>
-  <div class="grid-container">
-    <div class="vinos__tradicional vinos" style="background-image: url(img/chacabuco-chenin-w.png)"></div>
-        <div class="vinos__tradicional vinos" style="
-                background-image: url(img/chacabuco-malbec-sin-añada-w.png);
-              "></div>
-        <div class="vinos__tradicional vinos" style="
-                background-image: url(img/chacabuco-rose-sin-añada-w.png);
-              "></div>
-        <div class="vinos__tradicional vinos" style="
-                background-image: url(img/LH-Estate-Malbec-w.png);
-                "></div>
-        <div class="vinos__tradicional vinos" style="background-image: url(img/Los-haroldos-estate-blend-w.png)"></div>
-        <div class="vinos__tradicional vinos" style="
-                background-image: url(img/Los-haroldos-Estate-w.png);
-                "></div>
-        <div class="vinos__tradicional vinos" style="
-                background-image: url(img/Nampe-Malbec-sin-año-w.png);
-                "></div>
-        <div class="vinos__tradicional vinos" style="
-        background-image: url(img/NAMPE-chardonay-w-204x226.png);
-        "></div>
+      </nav>
+      <h1 class="text-center text-light w-100 bg-dark">Línea completa de nuestros vinos</h1>
+      <div class="grid-container">
+        <div class="vinos__tradicional vinos"><img src="./img/chacabuco-chenin-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/chacabuco-malbec-sin-añada-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/chacabuco-rose-sin-añada-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos small"><img src="./img/LH-Estate-Malbec-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/Los-haroldos-estate-blend-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/Los-haroldos-Estate-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/Nampe-Malbec-sin-año-w.png" alt=""></div>
+        <div class="vinos__tradicional vinos"><img src="./img/NAMPE-chardonay-w-204x226.png" alt=""></div>
         <div class="vinos__premium vinos" style="
                 background-image: url(img/HERMANDAD-CAB-FRANC-2017-w.jpg);
                 "></div>
@@ -80,7 +98,6 @@
                 background-image: url(img/ferus-bb-1-w.jpg);
                 "></div>
               </div>
-              <h3 class="info-vinos">Encontrá más información sobre nuestros vinos <a href="masInfo.html" class="info-vinos__link-vinos">haciendo click acá.</a></h3>
       </div>
       
       <div class="padre-footer">
