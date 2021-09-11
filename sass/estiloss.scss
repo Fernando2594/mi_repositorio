@@ -37,16 +37,6 @@ body {
             color: $color-principal;
             text-align: center;
         }
-        &__redes{
-            display: flex;
-            flex-direction: column-reverse;
-            padding-bottom: 20px;
-            margin-left: 50px;
-        }
-        &__migaDePan{
-            padding-top: 150px;
-            color: rgba(255, 248, 240, 0.973);
-        }
     }
     .window-notice {
         background: rgba(33, 41, 52, .85);
@@ -140,26 +130,31 @@ body {
                 text-decoration: none;
                 color:rgba(27, 26, 26, 0.658);
                 &:hover{
-                   transform: scale(1.1);
+                   transform: scale(1.02);
                     color: $color-principal;
                     transition:ease-in-out (0.3s);
                 }
             }
             &__item1{
                 padding: 1.2rem;
+                color:rgba(27, 26, 26, 0.658);
                 font-size: 1rem;
                 border-radius: 2px;
                 text-decoration: none;
-                color: $color-principal;
                 &:hover{
-                    background:linear-gradient(rgb(255, 0, 140),$color-principal);
-                    color: black;
-                    transition:ease-in-out (0.5s);
+                    transition:ease-in-out (0.3s);
                 }
             }
+            
         }
-        
-
+        // APLICO EACH EN LOS ÍCONOS DE REDES SOCIALES
+        @each $nombre, $color in $listaRedes {
+            .#{$nombre}{
+                &:hover{
+                    color: $color;
+                }
+            }
+            }
     .container-fluid-index{
         height: 100%;
     }
@@ -190,8 +185,6 @@ body {
                     }
                 }
     }
-
-    // BEM
  .vinos {
    display: flex;
    align-items: center;
@@ -217,7 +210,7 @@ body {
    transform: scale(1.04);
  }
  .container-info-vinos{
-     height: 160rem;
+     height: 2200px;
      display: flex;
      justify-content:space-around;
      flex-wrap: Wrap;
@@ -233,12 +226,12 @@ body {
          font-size: 1rem;
          width: 50%;
          text-align: center;
-         margin-top: 8rem;
+         margin-top: 5rem;
      }
      &__img{
          margin-top: 10px;
          margin-left: 20px;
-         width: 45%;
+         width: 35%;
          &:hover{
             filter: opacity(0.9);
             transform: scale(1.02);
@@ -261,7 +254,6 @@ body {
    grid-auto-flow: dense;
  }
 
-// BEM
  .container-help{
     background: radial-gradient(black,$color-fondo);
     height: 600px;
@@ -273,8 +265,6 @@ body {
      display: grid;
      margin-left: 30%;
  }
-
-
  .gridEquipo{
      display: grid;
      grid-template-columns: 1fr 1fr ;
@@ -290,8 +280,6 @@ body {
          background-color: #b9ae43;
      }
  }
-
-
  .container-fluid{
         &__title-fincas{
             display: flex;
@@ -311,7 +299,22 @@ body {
         padding-top: 10px;
     }
  }
- 
+ .container-premios{
+     &__col-md-3{
+         padding-top: 50px;
+         align-content:start;
+         width: 33%;
+         margin-left: 8rem;
+         font-size: 1.5rem;
+         display:inline-block;
+         color: $color-principal;
+         text-align: center;
+     }
+     &__texto{
+     height: 80%;
+     }
+ }
+//  MEDIA QUERIES
  @media (max-width:1120px){
     .padre-header{
         display: grid;
@@ -336,8 +339,35 @@ body {
             text-align: center;
         }
  }
+ .container-premios{
+    &__col-md-3{
+        display: none;
+        padding-top: 50px;
+        align-content:start;
+        width: 33%;
+        margin-left: 8rem;
+        font-size: 1.3rem;
+        display:inline-block;
+        color: $color-principal;
+        text-align: center;
+    }
+}
  }
- 
+ @media (max-width:1050px){
+    .container-premios{
+        &__col-md-3{
+            display: none;
+            padding-top: 50px;
+            align-content:start;
+            width: 33%;
+            margin-left: 8rem;
+            font-size: 1.2rem;
+            display:inline-block;
+            color: $color-principal;
+            text-align: center;
+        }
+    }
+     }
  @media (max-width:800px){
     .padre-header{
         display: grid;
@@ -419,7 +449,7 @@ body {
     &__img{
         margin-right: 30px;
         margin-bottom: -100px;
-        width: 90%;
+        width: 100%;
         &:hover{
            filter: opacity(0.9);
            transform: scale(1.02);
@@ -430,6 +460,25 @@ body {
         
         width: 20%;
     }
+}
+.container-premios{
+    &__col-md-3{
+        display: none;
+        padding-top: 50px;
+        align-content:start;
+        padding-right: 100px;  
+        font-size: 1.1rem;
+        display:inline-block;
+        color: $color-principal;
+        text-align: center;
+    }
+&__img{
+    width: 80%;
+}
+&__texto{
+    width: 80%;
+    margin-left: 120px;
+}
 }
  }
  @media (max-width:580px){
@@ -475,5 +524,24 @@ body {
             &__fondoTarjeta{
                 background-color: #b9ae43;
             }
+        }
+        .container-premios{
+            &__col-md-3{
+                display: none;
+                padding-top: 50px;
+                align-content:start;
+                padding-right: 60px;  
+                font-size: 1.1rem;
+                display:inline-block;
+                color: $color-principal;
+                text-align: center;
+            }
+        &__img{
+            width: 70%;
+        }
+        &__texto{
+            width: 70%;
+            margin-left: 120px;
+        }
         }
         }
